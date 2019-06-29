@@ -43,7 +43,7 @@ func printLeftSubTree(root *Node) {
 
 func printRightSubTree(root *Node) {
 	if root != nil && root.right != nil {
-		printLeftSubTree(root.right)
+		printRightSubTree(root.right)
 		fmt.Printf("%d\n", root.key)
 	}
 }
