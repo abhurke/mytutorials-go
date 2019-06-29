@@ -48,6 +48,12 @@ func printRightSubTree(root *Node) {
 	}
 }
 
+func printRightSubTreeWithoutRoot(root *Node) {
+	if root != nil && root.right != nil {
+		printRightSubTree(root.right)
+	}
+}
+
 func printLeaves(root *Node) {
 	if root != nil && root.left == nil && root.right == nil {
 		fmt.Printf("%d\n", root.key)
@@ -77,5 +83,5 @@ func main() {
 	// print the boundary of the tree
 	printLeftSubTree(r)
 	printLeaves(r)
-	printRightSubTree(r)
+	printRightSubTreeWithoutRoot(r)
 }
